@@ -1,0 +1,96 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Abril Fatface', serif;
+}
+
+* {
+    cursor: default;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+:root {
+    font-size: 20px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+#loading-screen {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(195, 183, 183);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+#loading-screen #loading-bar {
+    width: 80%;
+    height: 10%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    border-radius: 1rem;
+    border: 1px solid rgb(40, 38, 38);
+
+
+    overflow: hidden;
+}
+
+#loading-bar-fill {
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(50, 37, 37);
+
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+
+    border-radius: 1rem;
+}
+
+#loading-screen-logo {
+    width: 25%;
+
+    margin-bottom: 1.5rem;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+#loading-screen-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Create a css animation of a loading bar */
+@keyframes loading {
+    0% {
+        width: 0%;
+    } 
+    100% {
+        width: 100%;
+    }
+}
